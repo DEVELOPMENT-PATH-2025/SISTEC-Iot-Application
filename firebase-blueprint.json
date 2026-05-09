@@ -1,0 +1,47 @@
+{
+  "entities": {
+    "Reading": {
+      "title": "Sensor Reading",
+      "description": "A single temperature and humidity reading from the DHT11 sensor.",
+      "type": "object",
+      "properties": {
+        "temperature": {
+          "type": "number",
+          "description": "Temperature in Celsius"
+        },
+        "humidity": {
+          "type": "number",
+          "description": "Humidity percentage"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server-side timestamp of the reading"
+        }
+      },
+      "required": ["temperature", "humidity", "timestamp"]
+    },
+    "User": {
+      "title": "User Profile",
+      "description": "Stores user profile information and activity.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "displayName": { "type": "string" },
+        "email": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "lastLogin": { "type": "string", "format": "date-time" }
+      }
+    }
+  },
+  "firestore": {
+    "readings": {
+      "schema": "Reading",
+      "description": "Collection of sensor readings from the IoT device."
+    },
+    "users": {
+        "schema": "User",
+        "description": "Collection of user profiles."
+    }
+  }
+}

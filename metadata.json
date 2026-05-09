@@ -1,0 +1,6 @@
+{
+  "name": "SISTec IoT Application 2026",
+  "description": "A comprehensive IoT dashboard for monitoring temperature and humidity with integrated LCD message control.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
